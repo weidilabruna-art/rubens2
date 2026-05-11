@@ -101,7 +101,7 @@
 			max-width: 100% !important;
 			height: auto !important;
 			max-height: 550px !important; /* Tamanho ideal vertical */
-			border-radius: 20px !important;
+			border-radius: 10px !important; /* Bordas menos arredondadas */
 			box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 			object-fit: contain !important;
 			background-color: #000;
@@ -109,7 +109,7 @@
 
 		@media (max-width: 767px) {
 			.depoimentos-carousel .depo-item {
-				max-height: 420px !important; /* Aumentado levemente para igualar o exemplo */
+				max-height: 460px !important; /* Aumentado mais para preencher a tela */
 			}
 		}
 
@@ -4153,7 +4153,7 @@ var ElementorProFrontendConfig = {"ajaxurl":"/wp-admin/admin-ajax.php","nonce":"
 				if (container && typeof Swiper !== 'undefined') {
 					console.log('Iniciando carrossel de depoimentos...');
 					new Swiper(container, {
-						slidesPerView: 2.1, // Aumentado levemente para preencher melhor a tela
+						slidesPerView: 2, // Exatamente 2 imagens na tela
 						centeredSlides: false,
 						spaceBetween: 10,
 						loop: true,
