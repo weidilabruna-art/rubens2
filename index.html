@@ -136,24 +136,9 @@
 			display: none !important;
 		}
 
-		/* Fix para o Carrossel não arrastar a página e espaçamento */
+		/* Fix para o Carrossel não arrastar a página */
 		.elementor-element-0690b11 .swiper {
 			touch-action: pan-y !important;
-			padding: 10px 0 !important;
-		}
-
-		.elementor-element-0690b11 .swiper-slide {
-			padding: 0 10px !important; /* Espaçamento entre os itens */
-			display: flex !important;
-			justify-content: center !important;
-			align-items: center !important;
-		}
-
-		.elementor-element-0690b11 .swiper-slide img {
-			width: 100% !important; /* Garante que as imagens apareçam */
-			max-width: 100% !important;
-			height: auto !important;
-			object-fit: cover !important;
 		}
 
 		/* Otimização de Performance e Fluidez */
@@ -3037,7 +3022,7 @@
 					data-settings="{&quot;slides_to_show&quot;:&quot;4&quot;,&quot;slides_to_show_mobile&quot;:&quot;2&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:3000,&quot;speed&quot;:500,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
 					data-widget_type="image-carousel.default">
 					<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel"
-						aria-label="Carrossel de imagens" dir="ltr">
+						aria-label="Carrossel de imagens" dir="rtl">
 						<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
 							<!-- Video 1 -->
 							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 de 10">
@@ -4017,11 +4002,12 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/dmdacademy.vercel.app\/wp-admin\/admin-ajax.php","nonce":"0ea9d2bbd6","urls":{"assets":"https:\/\/dmdacademy.vercel.app\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/dmdacademy.vercel.app\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/dmdacademy.vercel.app\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
 //# sourceURL=elementor-pro-frontend-js-before
 </script>
-	<!-- Scripts do Elementor e Swiper (Carregados de fontes estáveis) -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script type="text/javascript"
-		src="https://unpkg.com/elementor-frontend/assets/js/frontend.min.js"
+		src="https://guiadogui.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.34.3"
 		id="elementor-pro-frontend-js" defer=""></script>
+	<script type="text/javascript"
+		src="https://guiadogui.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.34.3"
+		id="pro-elements-handlers-js" defer=""></script>
 	<script>window.lazyLoadOptions = [{ elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }, { elements_selector: ".rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, }]; window.addEventListener('LazyLoad::Initialized', function (e) {
 			var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
 				var observer = new MutationObserver(function (mutations) {
@@ -4159,38 +4145,30 @@ var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/dmdacademy.vercel.app\/wp
 			}, true); // Usa fase de captura para interceptar o clique antes de outros scripts
 		})();
 
-		// 5. Ajuste de Estabilidade e Autoplay do Carrossel (Versão Corrigida)
+		// 5. Ajuste de Estabilidade e Autoplay do Carrossel
 		(function () {
-			function initCustomSwiper() {
-				const container = document.querySelector('.elementor-element-0690b11 .swiper');
-				if (container && typeof Swiper !== 'undefined') {
-					// Se já existe uma instância, não faz nada (deixa o Elementor lidar se ele funcionar)
-					if (container.swiper) return;
-
-					console.log('Inicializando Swiper manualmente...');
-					new Swiper(container, {
-						slidesPerView: 2,
-						spaceBetween: 20,
-						loop: true,
-						dir: 'ltr',
-						autoplay: {
-							delay: 3000,
-							disableOnInteraction: false,
-						},
-						breakpoints: {
-							768: {
-								slidesPerView: 4,
-								spaceBetween: 20
-							}
+			function fixCarousel() {
+				const carouselEl = document.querySelector('.elementor-element-0690b11 .swiper');
+				if (carouselEl && carouselEl.swiper) {
+					const swiper = carouselEl.swiper;
+					// Força configurações de autoplay
+					if (swiper.params) {
+						if (!swiper.params.autoplay || typeof swiper.params.autoplay !== 'object') {
+							swiper.params.autoplay = {};
 						}
-					});
+						swiper.params.autoplay.delay = 3000;
+						swiper.params.autoplay.disableOnInteraction = false;
+						swiper.params.speed = 500;
+						if (swiper.autoplay) {
+							swiper.autoplay.stop();
+							swiper.autoplay.start();
+						}
+					}
+					carouselEl.style.maxHeight = '500px';
 				}
 			}
-			
-			// Tenta inicializar em diferentes momentos para garantir
-			window.addEventListener('load', initCustomSwiper);
-			setTimeout(initCustomSwiper, 2000);
-			document.addEventListener('rocket-allScriptsLoaded', initCustomSwiper);
+			window.addEventListener('load', () => setTimeout(fixCarousel, 1000));
+			let c = 0; const i = setInterval(() => { fixCarousel(); if (c++ > 5) clearInterval(i); }, 2000);
 		})();
 	</script>
 
