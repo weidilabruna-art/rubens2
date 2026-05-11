@@ -83,9 +83,10 @@
 		.depoimentos-carousel {
 			width: 100%;
 			max-width: 1100px;
-			margin: 30px auto !important;
-			padding: 20px 0 !important;
+			margin: 0 auto !important; /* Espaço reduzido */
+			padding: 10px 0 !important;
 			overflow: hidden;
+			touch-action: pan-y !important; /* Evita mexer a página lateralmente */
 		}
 
 		.depoimentos-carousel .swiper-slide {
@@ -108,8 +109,16 @@
 
 		@media (max-width: 767px) {
 			.depoimentos-carousel .depo-item {
-				max-height: 450px !important;
+				max-height: 380px !important; /* Reduzido para caber melhor 2 imagens */
 			}
+		}
+
+		/* Reduz o espaço entre o texto e o carrossel */
+		.elementor-element-742cec2 {
+			margin-bottom: 5px !important;
+		}
+		.elementor-element-742cec2 p {
+			margin-bottom: 0 !important;
 		}
 
 		/* Ajuste do Carrossel de Provas Sociais */
@@ -4144,9 +4153,9 @@ var ElementorProFrontendConfig = {"ajaxurl":"/wp-admin/admin-ajax.php","nonce":"
 				if (container && typeof Swiper !== 'undefined') {
 					console.log('Iniciando carrossel de depoimentos...');
 					new Swiper(container, {
-						slidesPerView: 1.5,
-						centeredSlides: true,
-						spaceBetween: 15,
+						slidesPerView: 2.2, // Ajustado para caber 2 imagens (com sobra)
+						centeredSlides: false,
+						spaceBetween: 10,
 						loop: true,
 						autoplay: {
 							delay: 4000,
