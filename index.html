@@ -79,6 +79,37 @@
 
 		.elementor-element-7be99ef .profile:first-child {
 			margin-left: 0 !important;
+		}		/* Carrossel de Depoimentos - Estilo Personalizado */
+		.depoimentos-carousel {
+			width: 100%;
+			max-width: 1100px;
+			margin: 30px auto !important;
+			padding: 20px 0 !important;
+			overflow: hidden;
+		}
+
+		.depoimentos-carousel .swiper-slide {
+			display: flex !important;
+			justify-content: center !important;
+			align-items: center !important;
+			transition: transform 0.3s ease;
+		}
+
+		.depoimentos-carousel .depo-item {
+			width: auto !important;
+			max-width: 100% !important;
+			height: auto !important;
+			max-height: 550px !important; /* Tamanho ideal vertical */
+			border-radius: 20px !important;
+			box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+			object-fit: contain !important;
+			background-color: #000;
+		}
+
+		@media (max-width: 767px) {
+			.depoimentos-carousel .depo-item {
+				max-height: 450px !important;
+			}
 		}
 
 		/* Ajuste do Carrossel de Provas Sociais */
@@ -136,9 +167,24 @@
 			display: none !important;
 		}
 
-		/* Fix para o Carrossel não arrastar a página */
+		/* Fix para o Carrossel não arrastar a página e espaçamento */
 		.elementor-element-0690b11 .swiper {
 			touch-action: pan-y !important;
+			padding: 10px 0 !important;
+		}
+
+		.elementor-element-0690b11 .swiper-slide {
+			padding: 0 10px !important; /* Espaçamento entre os itens */
+			display: flex !important;
+			justify-content: center !important;
+			align-items: center !important;
+		}
+
+		.elementor-element-0690b11 .swiper-slide img {
+			width: 100% !important; /* Garante que as imagens apareçam */
+			max-width: 100% !important;
+			height: auto !important;
+			object-fit: cover !important;
 		}
 
 		/* Otimização de Performance e Fluidez */
@@ -3017,69 +3063,27 @@
 						pessoas comuns executando um processo simples e vendo as vendas acontecerem na prática.</p>
 				</div>
 
-				<div class="elementor-element elementor-element-0690b11 blur elementor-widget elementor-widget-image-carousel"
-					data-id="0690b11" data-element_type="widget" data-e-type="widget"
-					data-settings="{&quot;slides_to_show&quot;:&quot;4&quot;,&quot;slides_to_show_mobile&quot;:&quot;2&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay_speed&quot;:3000,&quot;speed&quot;:500,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-					data-widget_type="image-carousel.default">
-					<div class="elementor-image-carousel-wrapper swiper" role="region" aria-roledescription="carousel"
-						aria-label="Carrossel de imagens" dir="rtl">
-						<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
-							<!-- Video 1 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 de 10">
-								<figure class="swiper-slide-inner">
-									<video src="images/video%201.MP4" loop muted playsinline autoplay controls
-										controlsList="nodownload noplaybackrate" class="social-proof-video"></video>
-								</figure>
-							</div>
-							<!-- Video 2 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 de 10">
-								<figure class="swiper-slide-inner">
-									<video src="images/video%202.MP4" loop muted playsinline autoplay controls
-										controlsList="nodownload noplaybackrate" class="social-proof-video"></video>
-								</figure>
-							</div>
-							<!-- Imagem 1 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/1.png" alt="Prova 1"></figure>
-							</div>
-							<!-- Imagem 2 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/2.png" alt="Prova 2"></figure>
-							</div>
-							<!-- Imagem 3 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/3.png" alt="Prova 3"></figure>
-							</div>
-							<!-- Imagem 4 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/4.png" alt="Prova 4"></figure>
-							</div>
-							<!-- Imagem 5 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/5.png" alt="Prova 5"></figure>
-							</div>
-							<!-- Imagem 6 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="8 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/6.png" alt="Prova 6"></figure>
-							</div>
-							<!-- Imagem 7 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="9 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/7.png" alt="Prova 7"></figure>
-							</div>
-							<!-- Imagem 8 -->
-							<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="10 de 10">
-								<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-										src="images/8.png" alt="Prova 8"></figure>
-							</div>
+				<div class="depoimentos-carousel swiper">
+					<div class="swiper-wrapper">
+						<!-- Video 1 -->
+						<div class="swiper-slide">
+							<video src="images/video%201.MP4" loop muted playsinline autoplay controls
+								controlsList="nodownload noplaybackrate" class="depo-item"></video>
 						</div>
-
+						<!-- Video 2 -->
+						<div class="swiper-slide">
+							<video src="images/video%202.MP4" loop muted playsinline autoplay controls
+								controlsList="nodownload noplaybackrate" class="depo-item"></video>
+						</div>
+						<!-- Provas Imagens -->
+						<div class="swiper-slide"><img src="images/1.png" class="depo-item" alt="Prova 1"></div>
+						<div class="swiper-slide"><img src="images/2.png" class="depo-item" alt="Prova 2"></div>
+						<div class="swiper-slide"><img src="images/3.png" class="depo-item" alt="Prova 3"></div>
+						<div class="swiper-slide"><img src="images/4.png" class="depo-item" alt="Prova 4"></div>
+						<div class="swiper-slide"><img src="images/5.png" class="depo-item" alt="Prova 5"></div>
+						<div class="swiper-slide"><img src="images/6.png" class="depo-item" alt="Prova 6"></div>
+						<div class="swiper-slide"><img src="images/7.png" class="depo-item" alt="Prova 7"></div>
+						<div class="swiper-slide"><img src="images/8.png" class="depo-item" alt="Prova 8"></div>
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-84037b6 scroll-bottom elementor-widget elementor-widget-button"
@@ -3954,7 +3958,7 @@
 //# sourceURL=rocket-browser-checker-js-after
 </script>
 	<script id="rocket-preload-links-js-extra">
-		var RocketPreloadLinksConfig = { "excludeUris": "/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm", "siteUrl": "https://dmdacademy.vercel.app", "onHoverDelay": "100", "rateThrottle": "3" };
+		var RocketPreloadLinksConfig = { "excludeUris": "/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm", "siteUrl": "https://dmd.rubensgodoy.com.br", "onHoverDelay": "100", "rateThrottle": "3" };
 		//# sourceURL=rocket-preload-links-js-extra
 	</script>
 	<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
@@ -3965,49 +3969,37 @@
 //# sourceURL=rocket-preload-links-js-after
 </script>
 	<script type="rocketlazyloadscript" data-minify="1"
-		data-rocket-src="https://dmdacademy.vercel.app/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=1769713205"
+		data-rocket-src="js/hello-frontend.js?ver=1769713205"
 		id="hello-theme-frontend-js" data-rocket-defer="" defer=""></script>
 
-	<script type="rocketlazyloadscript"
-		src="https://guiadogui.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.0.5"
-		id="elementor-webpack-runtime-js" data-rocket-defer="" defer=""></script>
-	<script type="rocketlazyloadscript"
-		src="https://guiadogui.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.0.5"
-		id="elementor-frontend-modules-js" data-rocket-defer="" defer=""></script>
+	<script type="text/javascript"
+		src="js/webpack.runtime.min.js?ver=4.0.5"
+		id="webpack-runtime-js" defer=""></script>
+	<script type="text/javascript"
+		src="js/frontend-modules.min.js?ver=4.0.5"
+		id="elementor-frontend-modules-js" defer=""></script>
 	<script type="rocketlazyloadscript"
 		src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js" id="jquery-ui-core-js"
 		data-rocket-defer="" defer=""></script>
 	<script type="rocketlazyloadscript" id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.0.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"e_pro_free_trial_popup":true,"nested-elements":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true,"mega-menu":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/6.0.0\/","ajaxurl":"https:\/\/dmdacademy.vercel.app\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/dmdacademy.vercel.app\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"8cb0513691","atomicFormsSendForm":"88013412fa"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":19,"title":"Low%20Ticket%20do%20Zero","excerpt":"","featuredImage":"images/Design sem nome - 2026-05-11T024939.419.png"}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.0.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"e_pro_free_trial_popup":true,"nested-elements":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true,"mega-menu":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/6.0.0\/","ajaxurl":"\/wp-admin\/admin-ajax.php","uploadUrl":"\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"8cb0513691","atomicFormsSendForm":"88013412fa"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":19,"title":"Low%20Ticket%20do%20Zero","excerpt":"","featuredImage":"images/Design sem nome - 2026-05-11T024939.419.png"}};
 //# sourceURL=elementor-frontend-js-before
 </script>
-	<script type="text/javascript"
-		src="https://guiadogui.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.0.5"
-		id="elementor-frontend-js" defer=""></script>
-	<script type="text/javascript"
-		src="https://guiadogui.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5"
-		id="swiper-js" defer=""></script>
-	<script type="text/javascript"
-		src="https://guiadogui.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.34.3"
-		id="elementor-pro-webpack-runtime-js" defer=""></script>
-	<script type="text/javascript" src="https://guiadogui.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1"
-		id="wp-hooks-js"></script>
-	<script type="text/javascript" src="https://guiadogui.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375"
-		id="wp-i18n-js"></script>
+	<script type="text/javascript" src="js/frontend.min.js" id="elementor-frontend-js" defer=""></script>
+	<script type="text/javascript" src="js/swiper-bundle.min.js" id="swiper-js" defer=""></script>
+	<script type="text/javascript" src="js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js" defer=""></script>
+	<script type="text/javascript" src="js/hooks.min.js" id="wp-hooks-js"></script>
+	<script type="text/javascript" src="js/i18n.min.js" id="wp-i18n-js"></script>
 	<script type="rocketlazyloadscript" id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
 </script>
 	<script type="rocketlazyloadscript" id="elementor-pro-frontend-js-before">
-var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/dmdacademy.vercel.app\/wp-admin\/admin-ajax.php","nonce":"0ea9d2bbd6","urls":{"assets":"https:\/\/dmdacademy.vercel.app\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/dmdacademy.vercel.app\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/dmdacademy.vercel.app\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+var ElementorProFrontendConfig = {"ajaxurl":"/wp-admin/admin-ajax.php","nonce":"0ea9d2bbd6","urls":{"assets":"/wp-content/plugins/elementor-pro/assets/","rest":"/wp-json/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"facebook_sdk":{"lang":"pt_BR","app_id":""}};
 //# sourceURL=elementor-pro-frontend-js-before
 </script>
-	<script type="text/javascript"
-		src="https://guiadogui.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.34.3"
-		id="elementor-pro-frontend-js" defer=""></script>
-	<script type="text/javascript"
-		src="https://guiadogui.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.34.3"
-		id="pro-elements-handlers-js" defer=""></script>
+	<!-- Swiper Bundle (CDN para garantir funcionamento imediato) -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>window.lazyLoadOptions = [{ elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }, { elements_selector: ".rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, }]; window.addEventListener('LazyLoad::Initialized', function (e) {
 			var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
 				var observer = new MutationObserver(function (mutations) {
@@ -4142,33 +4134,41 @@ var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/dmdacademy.vercel.app\/wp
 					details.setAttribute('open', '');
 					summary.setAttribute('aria-expanded', 'true');
 				}
-			}, true); // Usa fase de captura para interceptar o clique antes de outros scripts
+			}, true);
 		})();
 
-		// 5. Ajuste de Estabilidade e Autoplay do Carrossel
+		// 5. Novo Carrossel de Depoimentos (Do Zero)
 		(function () {
-			function fixCarousel() {
-				const carouselEl = document.querySelector('.elementor-element-0690b11 .swiper');
-				if (carouselEl && carouselEl.swiper) {
-					const swiper = carouselEl.swiper;
-					// Força configurações de autoplay
-					if (swiper.params) {
-						if (!swiper.params.autoplay || typeof swiper.params.autoplay !== 'object') {
-							swiper.params.autoplay = {};
+			function initDepoimentos() {
+				const container = document.querySelector('.depoimentos-carousel');
+				if (container && typeof Swiper !== 'undefined') {
+					console.log('Iniciando carrossel de depoimentos...');
+					new Swiper(container, {
+						slidesPerView: 1.5,
+						centeredSlides: true,
+						spaceBetween: 15,
+						loop: true,
+						autoplay: {
+							delay: 4000,
+							disableOnInteraction: false,
+						},
+						breakpoints: {
+							768: {
+								slidesPerView: 3,
+								centeredSlides: false,
+								spaceBetween: 25
+							},
+							1024: {
+								slidesPerView: 4,
+								centeredSlides: false,
+								spaceBetween: 30
+							}
 						}
-						swiper.params.autoplay.delay = 3000;
-						swiper.params.autoplay.disableOnInteraction = false;
-						swiper.params.speed = 500;
-						if (swiper.autoplay) {
-							swiper.autoplay.stop();
-							swiper.autoplay.start();
-						}
-					}
-					carouselEl.style.maxHeight = '500px';
+					});
 				}
 			}
-			window.addEventListener('load', () => setTimeout(fixCarousel, 1000));
-			let c = 0; const i = setInterval(() => { fixCarousel(); if (c++ > 5) clearInterval(i); }, 2000);
+			window.addEventListener('load', initDepoimentos);
+			setTimeout(initDepoimentos, 1500);
 		})();
 	</script>
 
